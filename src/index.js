@@ -1,4 +1,3 @@
-const axios = require("axios").default;
 
 function formatDate(date) {
   let hours = date.getHours();
