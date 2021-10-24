@@ -30,6 +30,9 @@ button {
   border: 1px solid;
   border-radius: 5px;
 }
+footer {
+  text-align: center;
+}
 .search-form {
   width: 30%;
 }
