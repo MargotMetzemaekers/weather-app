@@ -1,5 +1,3 @@
-import { get } from "axios";
-
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -38,7 +36,7 @@ function displayWeatherCondition(response) {
 function searchCity(city) {
   let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  get(apiUrl).then(displayWeatherCondition);
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function useInput(event) {
@@ -50,7 +48,7 @@ function useInput(event) {
 function searchLocation(position) {
   let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  get(apiUrl).then(displayWeatherCondition);
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function getCurrentLocation(event) {
